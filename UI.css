@@ -1,0 +1,172 @@
+* {
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+}
+
+body {
+  background: #000000;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  margin: 0;
+  overflow: hidden;
+}
+
+.box {
+  cursor: pointer;
+  position: absolute;
+  display: block;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background: #ff4d4d;
+}
+
+.one {
+  background-image: url("back_cover.png");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center; 
+  background-size: cover;
+}
+/* .one h1 {
+  color: white;
+  text-align: center;
+  font: bold 2em/2em sans-serif;
+  position: absolute;
+  width: 200px;
+  height: 50px;
+  left: 50%;
+  top: 50%;
+  margin-left: -100px;
+  margin-top: -50px;
+} */
+
+
+.two {
+  background: #ec3e3e;
+}
+
+.three {
+  background-image: url("back_cover.png");
+}
+
+.four {
+  background-image: url("back_cover.png");
+}
+
+#source{
+  width: 300px;
+  height: 46px;
+}
+
+#source:focus {
+  width: 400px;
+  height: 46px;
+}
+
+
+#destination{
+  width: 300px;
+  height: 46px;
+}
+
+#destination:focus{
+  width: 400px;
+  height: 46px;  
+}
+
+#submit_it{
+  color: white;
+  font-weight: bold;
+  font-size:20px;
+  width: 300px;
+  height: 46px;
+  opacity: 0;
+}
+
+#modal-image
+{
+  width: 50%;
+  height: auto;
+}
+
+.head
+{
+
+  letter-spacing: 8px;
+  color:#ffffff;
+  font:bold 2em/2em sans-serif;
+  font-family: 'Gill Sans', 'sans-serif';
+  font-weight: 200;
+  /* text-shadow:
+  0 0 6px rgba(202,228,225,0.92),
+  0 0 30px rgba(202,228,225,0.34),
+  0 0 12px rgba(30,132,242,0.52),
+  0 0 21px rgba(30,132,242,0.92),
+  0 0 34px rgba(30,132,242,0.78),
+  0 0 54px rgba(30,132,242,0.92); */
+  font-size:30px;
+
+}
+
+#logo{
+  filter: drop-shadow(0 0 4px rgba(45, 219, 144, 0.48));
+  animation: neon 1.2s ease-in-out infinite alternate;  
+}
+
+
+.responsive-image
+{
+  width: 100%;
+  height: auto;
+}
+
+/*-- Animation Keyframes --*/
+
+/* // animation */
+
+@keyframes neon {
+  from {
+    filter: drop-shadow(0 0 14px rgba(45, 219, 144, 0.48));
+  }
+  to {
+    filter: drop-shadow(0 0 24px rgba(45, 219, 144, 0.78));
+  }
+}
+
+
+
+.down-arrow {
+  color:white;
+  position: relative;
+  font-size: 30px;
+  font-weight: 100;
+  animation-name: downanimation;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+
+}
+
+.down-arrow-alt {
+  color:black;
+  position: relative;
+  font-size: 30px;
+  animation-name: downanimation-alt;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+}
+
+/* Standard syntax */
+@keyframes downanimation-alt {
+  0%   {color:black; left:0px; top:0px;}
+  100%  {color:transparent; left:0px; top:50px;}
+
+}
+
+/* Standard syntax */
+@keyframes downanimation {
+  0%   {color:rgba(45, 219, 144, 0.98); left:0px; top:0px;}
+  100%  {color:transparent; left:0px; top:50px;}
+
+}
