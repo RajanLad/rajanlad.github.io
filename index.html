@@ -1,5 +1,3 @@
-
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -12,85 +10,104 @@
 <link rel="stylesheet" type="text/css" href="UI.css">
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
 </head>
+<!-- Francais -->
+<!-- J'ai thématisé ce site sur l'un de mes films préférés: "Hitchhiker Guide to the Galaxy", puisque l'API est basée sur Travel Application.
+Ce site Web agit comme "site d'atterrissage d'une seule page". Il est divisé en trois sections.
+La première section est juste un logo et le nom du produit.
+Dans la deuxième section, j'ai implémenté les trois API mentionnées dans le document "De et vers le champ de texte".  
+Dans la troisième section, il contient les mots "Ne paniquez pas", imprimés en grosses lettres amicales à la fin.-->
+<!-- Anglais -->
+<!-- I haved themed this website on one of my favourite movies : "Hitchhiker Guide to the Galaxy", since the API is based on Travel Application.
+This Website acts "Single page landing site". It's is divided in three sections. 
+First section is just a logo and name of product.
+In the second section, I have implemented the three API's mentioned in the document, From and to text field. 
+In the third section, it has the words "Don't Panic", printed in large friendly letters at the end.-->
 <body >
 
+    <!-- ____________________________________________Section one_____________________________________________________________________________ -->
     <div class='box one container-fluid  h-100'>
         <div class="justify-content-center align-items-center h-100 " style="display: flex;">
-            <div class="whole_as_group " >
+            <div class="whole_as_group">
+
                 <div class=" row justify-content-center">
-
                     <img src="hitch.png"  alt="Cinque Terre" id="logo" width="300px">
-
                 </div>
+
                 <div class="row justify-content-center">
                     <h2 class="head">Hitchhiker's Guide to the Europe</h2>
                 </div>
-                <div class="row justify-content-center" style="position:absolute;right:0;bottom:0;margin-bottom:5%;margin-right:5%;">
-                    <h2 class="down-arrow">Scroll Down</h2>    
+
+                <div class="justify-content-center navigator" onclick="to_section_two()">
+                    <h2 class="down-arrow" >Cliquez pour faire défiler</h2>    
                 </div>
+
             </div>
         
         </div>
     </div>
 
+    <!-- ____________________________________________Section two_____________________________________________________________________________ -->
     <div class='box two container-fluid h-100 '>
-    <div class="justify-content-center align-items-center h-100 " style="display: flex;">
-    <div class="whole_as_group w-100" >
-        <div class="row h-100 justify-content-center ">
-            <div class="col-sm-1" ></div>   
-
-                <div class="autocomplete" style="width:300px;">
-                    <input id="source" type="text" name="source" placeholder="From" onclick="this.select()">
-                    <p id=sourceUniqueValue hidden>sourceUniqueValue</p>
+        <div class="justify-content-center align-items-center h-100 " style="display: flex;">
+            <div class="whole_as_group w-100" >
+                <div class="row h-100 justify-content-center align-items-center">
+                    <h2>Sélectionnez des lieux</h2>
                 </div>
-                <div class="col-sm-1" ></div>
-                <div class="autocomplete" style="width:300px;">
-                    <input id="destination" type="text" name="destination" placeholder="To" onclick="this.select()">
-                    <p id=destUniqueValue hidden>destUniqueValue</p>
+
+                <div class="row h-100 justify-content-center ">
+                    <div class="col-sm-1" ></div>   
+
+                        <div class="autocomplete" style="width:300px;">
+                            <input id="source" type="text" name="source" placeholder="From" onclick="this.select()">
+                            <p id=sourceUniqueValue hidden>sourceUniqueValue</p>
+                        </div>
+                        <div class="col-sm-1" ></div>
+                        <div class="autocomplete" style="width:300px;">
+                            <input id="destination" type="text" name="destination" placeholder="To" onclick="this.select()">
+                            <p id=destUniqueValue hidden>destUniqueValue</p>
+                        </div>
+                    <div class="col-sm-1" ></div>
                 </div>
-            <div class="col-sm-1" ></div>
-        </div>
 
-        <div class="row h-100 justify-content-center align-items-center" style="margin-top:30px;">
+                <div class="row h-100 justify-content-center align-items-center" style="margin-top:30px;">
+                </div>
 
-        </div>
-
-        <div class="row h-100 justify-content-center align-items-center">
-
+                <div class="row h-100 justify-content-center align-items-center">
                     <button id="submit_it" type="button" class="btn btn-warning"  data-toggle="modal" data-target="#myModal" onclick="on_submit()">Hitch-Hike</button>
 
-                      <!-- The Modal -->
-                        <div class="modal" id="myModal">
-                            <div class="modal-dialog " style="max-width:650px;width:90%;">
-                            <div class="modal-content justify-content-center align-items-center " style="padding:20px">
-                            
-                                <!-- Modal Header -->
-                                <img src="marvin_modal.png"  alt="Cinque Terre" id="modal-image">
+                        <!-- The Modal -->
+                            <div class="modal" id="myModal" >
+                                <div class="modal-dialog " style="max-width:650px;width:90%;">
+                                    <div class="modal-content justify-content-center align-items-center " style="padding:20px;">
+                                    
+                                        <!-- Modal Header -->
+                                        <img src="marvin_modal.png"  alt="Cinque Terre" id="modal-image">
 
-                                <h4 id="confirm_message">Confirmed</h4>
+                                        <h4 id="confirm_message">Confirmed</h4>
 
-                                <button type="button" class="close" data-dismiss="modal"><font size=100>&times;</font></button>
-                                
-                                
-
-                                
+                                        <button type="button" class="close" data-dismiss="modal"><font style="font-size:100px;">&times;</font></button>
+                                    </div>
+                                </div>
                             </div>
-                            </div>
-                        </div>
+                </div>
+
+                <div class="justify-content-center navigator" onclick="to_section_last()">
+                    <h2 class="down-arrow" >Cliquez pour faire défiler</h2>    
+                </div>
+            </div>
         </div>
-
-    </div>
-    </div>
     </div>
 
+        <!-- ____________________________________________Section three_____________________________________________________________________________ -->
     <div class='box three container-fluid h-100'>
         <div class="justify-content-center align-items-center h-100 " style="display: flex;">
-                    <div class=" row justify-content-center">
+            <div class=" row justify-content-center">
+                <img src="dont-panic.png"  alt="Cinque Terre" class="responsive-image">
+            </div>
 
-                        <img src="dont-panic.png"  alt="Cinque Terre" class="responsive-image">
-
-            
-                    </div>
+            <div class="justify-content-center navigator" onclick="to_section_one()">
+                    <h2 class="down-arrow" >Cliquez pour aller au dessus</h2>    
+            </div>
         </div>
 
 </div>
@@ -111,10 +128,6 @@
 desResult(document.getElementById("destination"));
 sourceResult(document.getElementById("source"));
 
-function on_submit()
-{
-    document.getElementById("confirm_message").innerHTML="Vous voyagez à "+"<font color='red'>"+document.getElementById("destination").value+"</font>"+" de "+"<font color='red'>"+document.getElementById("source").value+"</font>";
-}
 
 </script>
 

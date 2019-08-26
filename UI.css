@@ -135,7 +135,13 @@ body {
   }
 }
 
-
+.navigator{
+  position:absolute;
+  right:0;
+  bottom:0;
+  margin-bottom:5%;
+  margin-right:5%;
+}
 
 .down-arrow {
   color:white;
@@ -166,7 +172,7 @@ body {
 
 /* Standard syntax */
 @keyframes downanimation {
-  0%   {color:rgba(45, 219, 144, 0.98); left:0px; top:0px;}
+  0%   {color:white; left:0px; top:0px;}
   100%  {color:transparent; left:0px; top:50px;}
 
 }

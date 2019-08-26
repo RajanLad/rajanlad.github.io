@@ -1,8 +1,39 @@
 function l(o) {console.log(o);}
 // Dirty dirty JQuery
 
+// ------------------------------ Implémentation du défilement régulier, ce qui est une raison apparente du piratage du défilement ne fonctionne pas dans Firefox ---------------
+function scrollIt(element) {  
+  window.scrollTo({
+    'behavior': 'smooth',
+    'left': 0,
+    'top': element.offsetTop
+  });
+}
 
+function on_submit()
+{
+    document.getElementById("confirm_message").innerHTML="Vous voyagez à "+"<font color='red'>"+document.getElementById("destination").value+"</font>"+" de "+"<font color='red'>"+document.getElementById("source").value+"</font>";
+}
 
+function to_section_two()
+{
+    //alert("v");
+    scrollIt(document.getElementsByClassName("two")[0]);
+}
+
+function to_section_last()
+{
+    //alert("v");
+    scrollIt(document.getElementsByClassName("three")[0]);
+}
+
+function to_section_one()
+{
+    //alert("v");
+    scrollIt(document.getElementsByClassName("one")[0]);
+}
+
+// ---------------------------------------- C'est l'implémentation de Scroll Hijack pour scroll , Je viens d’un code penn --------------------
 $(document).ready(function () {
 
   var sections = $('.box').toArray();
