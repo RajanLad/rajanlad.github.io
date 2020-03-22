@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+body{
+    background-color: #000;
+}
+.timeline {
+    background-color: #fff;
+    min-width: 100%;
+    min-height: 60px;
+    display: flex;
+    align-items: center;
+    border-radius: 30px;
+  }
+
+  .timeline--dot {
+  background-color: #e74c3c;
+  min-width: 50px;
+  height: 50px;
+  margin-right: 200px;
+  margin-left: 10px;
+  border-radius: 30px;
+}
+
+.timeline {
+  overflow-x: auto;
+}
+
+.timeline::-webkit-scrollbar {
+  display: none;
+}
+
+
+
+</style>
+</head>
+<body>
+<h1>Flexible Boxes</h1>
+
+<section class="timeline">
+
+  <div class="timeline--dot"></div>
+  <div class="timeline--dot"></div>
+  <div class="timeline--dot"></div>
+  <div class="timeline--dot"></div>
+  <div class="timeline--dot"></div>
+  <div class="timeline--dot"></div>
+  <div class="timeline--dot"></div>
+  <div class="timeline--dot"></div>
+  <div class="timeline--dot"></div>
+  <div class="timeline--dot"></div>
+</section>
+
+<p>Try to resize the browser window.</p>
+<p>A container with "flex-wrap: nowrap;" will never wrap its items.</p>
+<p><strong>Note:</strong> Flexbox is not supported in Internet Explorer 10 or earlier versions.</p>
+
+</body>
+</html>

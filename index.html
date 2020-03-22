@@ -9,6 +9,27 @@
 <link rel="stylesheet" type="text/css" href="index.css" media="screen" />
 <link rel="stylesheet" type="text/css" href="UI.css">
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Kanit:900|Monoton" rel="stylesheet">
+  <link href='https://fonts.googleapis.com/css?family=Jura' rel='stylesheet'>
+<script>
+(function() {
+    function scrollHorizontally(e) {
+        e = window.event || e;
+        var delta = Math.max(-1, Math.min(1, (e.wheelDelta || -e.detail)));
+        document.getElementById('timelin').scrollLeft -= (delta*40); // Multiplied by 40
+        e.preventDefault();
+    }
+    if (window.addEventListener) {
+        // IE9, Chrome, Safari, Opera
+        window.addEventListener("mousewheel", scrollHorizontally, false);
+        // Firefox
+        window.addEventListener("DOMMouseScroll", scrollHorizontally, false);
+    } else {
+        // IE 6/7/8
+        document.getElementById('yourDiv').attachEvent("onmousewheel", scrollHorizontally);
+    }
+})();
+</script>
 </head>
 <!-- Francais -->
 <!-- J'ai thématisé ce site sur l'un de mes films préférés: "Hitchhiker Guide to the Galaxy", puisque l'API est basée sur Travel Application.
@@ -34,11 +55,11 @@ In the third section, it has the words "Don't Panic", printed in large friendly 
                 </div>
 
                 <div class="row justify-content-center">
-                    <h2 class="head">Hitchhiker's Guide to the Europe</h2>
+                    <h2 class="head">Hitchhiker's Guide to the my World</h2>
                 </div>
 
                 <div class="justify-content-center navigator" onclick="to_section_two()">
-                    <h2 class="down-arrow" >Cliquez pour faire défiler</h2>    
+                    <h2 class="down-arrow" >Clique to swipe down</h2>    
                 </div>
 
             </div>
@@ -47,52 +68,48 @@ In the third section, it has the words "Don't Panic", printed in large friendly 
     </div>
 
     <!-- ____________________________________________Section two_____________________________________________________________________________ -->
-    <div class='box two container-fluid h-100 '>
-        <div class="justify-content-center align-items-center h-100 " style="display: flex;">
-            <div class="whole_as_group w-100" >
+    <div class='box two container-fluid h-100 ' id="two_timeline">
+            
+        <div class="justify-content-center align-items-center h-100 " style="display: flex;" >
+            <div class="whole_as_group w-100 h-100" >
                 <div class="row h-100 justify-content-center align-items-center">
-                    <h2>Sélectionnez des lieux</h2>
-                </div>
-
-                <div class="row h-100 justify-content-center ">
-                    <div class="col-sm-1" ></div>   
-
-                        <div class="autocomplete" style="width:300px;">
-                            <input id="source" type="text" name="source" placeholder="From" onclick="this.select()">
-                            <p id=sourceUniqueValue hidden>sourceUniqueValue</p>
-                        </div>
-                        <div class="col-sm-1" ></div>
-                        <div class="autocomplete" style="width:300px;">
-                            <input id="destination" type="text" name="destination" placeholder="To" onclick="this.select()">
-                            <p id=destUniqueValue hidden>destUniqueValue</p>
-                        </div>
-                    <div class="col-sm-1" ></div>
-                </div>
-
-                <div class="row h-100 justify-content-center align-items-center" style="margin-top:30px;">
-                </div>
-
-                <div class="row h-100 justify-content-center align-items-center">
-                    <button id="submit_it" type="button" class="btn btn-warning"  data-toggle="modal" data-target="#myModal" onclick="on_submit()">Hitch-Hike</button>
-
-                        <!-- The Modal -->
-                            <div class="modal" id="myModal" >
-                                <div class="modal-dialog " style="max-width:650px;width:90%;">
-                                    <div class="modal-content justify-content-center align-items-center " style="padding:20px;">
-                                    
-                                        <!-- Modal Header -->
-                                        <img src="marvin_modal.png"  alt="Cinque Terre" id="modal-image">
-
-                                        <h4 id="confirm_message">Confirmed</h4>
-
-                                        <button type="button" class="close" data-dismiss="modal"><font style="font-size:100px;">&times;</font></button>
+                        <section class="timeline" id="timelin">
+                                
+                                <div class="timeline--dot" >
+                                        <div class="time">13.8 Billion years ago<span class="tooltiptext"><h2>The god and the Big bang</h2><p class="two_description">In the beginning, the universe was created. This made a lot of people very angry and is being widely regarded as a bad move.</p></span></div>
                                     </div>
-                                </div>
+                            <div class="timeline--dot">
+                                <div class="time">07/12/1993<span class="tooltiptext-bottom"><h2>Date of Birth</h2><p class="two_description">I was born on this day and was burdened with along with others by Deep Thought to come up with ultimate question of life universe and everything that results to answer 42 ..</p></span></div>
+                                <div><i class="fa fa-birthday-cake"></i></div>
                             </div>
+                            <div class="timeline--dot">
+                                <div class="time">06/2012<span class="tooltiptext"><h2>Bacherlors in Computer Science</h2><p class="two_description">Started my bachelors @ SAKEC, Mumbai</p></span></div>
+                                <div><i class='fas fa-graduation-cap'></i></div></div>
+                            <div class="timeline--dot">
+                                <div class="time">07/2015<span class="tooltiptext-bottom"><h2>Programmming Faculty</h2><h6>@St. Angelo’s Computer Institute</h6><p class="two_description">I started teaching programming Languages like C , Java , JavaScript ,Android to students having technical background as well as to students with no technical background.</p></span></div>
+                                <div><i class='fas fa-briefcase'></i></div></div>
+                            <div class="timeline--dot">
+                                <div class="time">11/2016<span class="tooltiptext"><h2>Full Stack Android Dev.</h2><h6>@Kouchan</h6><p class="two_description">I started developing MVP product called “Book a Ride”
+                                        It is a transportation n/w app that allows passenger to ride at negotiable rate with range of transportation.</p></span></div>
+                                <div><i class='fas fa-briefcase'></i></div></div>
+                                
+                            <div class="timeline--dot">
+                                    <div class="time">03/2017<span class="tooltiptext-bottom"><h2>Android BLE Engineer</h2><h6>@Diabeto</h6><p class="two_description">I started integrating on Bluetooth Glucometers . I integrated 4 generic BLE profile glucometers, 5 custom BLE profile glucometers and 2 classic bluetooth glucometers.  .</p></span></div>                
+                                <div><i class='fas fa-briefcase'></i></div></div>
+                            <div class="timeline--dot">
+                                    <div class="time">08/2018<span class="tooltiptext"><h2>MSc. in Software Engineering</h2><h6>@EPITA</h6><p class="two_description">New city, new challenges.. Started my Masters @EPITA</p>.</p></span></div>
+                                <div><i class='fas fa-graduation-cap'></i></div>
+                            </div>
+                            <div class="timeline--dot">
+                                <div class="time">10/2019<span class="tooltiptext-bottom"><h2>Android Developer</h2><h6>@Datategy</h6><p class="two_description">Here I discuss with the project manager about client use cases and implementing those use cases with remote only and remote/LocalDB features on android app </p>.</p></span></div>
+                                <div><i class='fas fa-briefcase'></i></div>
+                            </div>
+                        </section>
                 </div>
 
+                
                 <div class="justify-content-center navigator" onclick="to_section_last()">
-                    <h2 class="down-arrow" >Cliquez pour faire défiler</h2>    
+                    <h2 class="down-arrow" >Clique to swipe down</h2>    
                 </div>
             </div>
         </div>
@@ -106,11 +123,11 @@ In the third section, it has the words "Don't Panic", printed in large friendly 
             </div>
 
             <div class="justify-content-center navigator" onclick="to_section_one()">
-                    <h2 class="down-arrow" >Cliquez pour aller au dessus</h2>    
+                    <h2 class="down-arrow" >Clique to goto top</h2>    
             </div>
         </div>
 
-</div>
+    </div>
 </body>
 
 <script src="https://static.codepen.io/assets/common/stopExecutionOnTimeout-de7e2ef6bfefd24b79a3f68b414b87b8db5b08439cac3f1012092b2290c719cd.js"></script>
@@ -121,7 +138,7 @@ In the third section, it has the words "Don't Panic", printed in large friendly 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
 <script src="./operational.js" type="text/javascript"></script>
-
+<script src='https://kit.fontawesome.com/a076d05399.js'></script>
 <script>
 
 

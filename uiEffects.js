@@ -64,17 +64,17 @@ $(document).ready(function () {
   setSizes();
   $('body').on('resize', setSizes());
 
-  function downSection() {
-    var positionFromTop = $(sections[scroll.activeSection + 1]).position().top;
-    $("body, html").animate({ "scrollTop": positionFromTop }, 300);
-    ++scroll.activeSection;
-  }
+  // function downSection() {
+  //   var positionFromTop = $(sections[scroll.activeSection + 1]).position().top;
+  //   $("body, html").animate({ "scrollTop": positionFromTop }, 300);
+  //   ++scroll.activeSection;
+  // }
 
-  function upSection() {
-    var positionFromTop = $(sections[scroll.activeSection - 1]).position().top;
-    $("body, html").animate({ "scrollTop": positionFromTop }, 300);
-    --scroll.activeSection;
-  }
+  // function upSection() {
+  //   var positionFromTop = $(sections[scroll.activeSection - 1]).position().top;
+  //   $("body, html").animate({ "scrollTop": positionFromTop }, 300);
+  //   --scroll.activeSection;
+  // }
 
   $("body").hammer({ preventDefault: true }).on("swipe", function (event) {
     if (event.gesture.direction == 'up') {
