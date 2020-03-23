@@ -19,14 +19,14 @@
         document.getElementById('timelin').scrollLeft -= (delta*40); // Multiplied by 40
         e.preventDefault();
     }
-    if (window.addEventListener) {
+    if (document.getElementById("section_two").addEventListener) {
         // IE9, Chrome, Safari, Opera
-        window.addEventListener("mousewheel", scrollHorizontally, false);
+        document.getElementById("section_two").addEventListener("mousewheel", scrollHorizontally, false);
         // Firefox
-        window.addEventListener("DOMMouseScroll", scrollHorizontally, false);
+        document.getElementById("section_two").addEventListener("DOMMouseScroll", scrollHorizontally, false);
     } else {
         // IE 6/7/8
-        document.getElementById('yourDiv').attachEvent("onmousewheel", scrollHorizontally);
+        document.getElementById("section_two").getElementById('yourDiv').attachEvent("onmousewheel", scrollHorizontally);
     }
 })();
 </script>
@@ -68,7 +68,7 @@ In the third section, it has the words "Don't Panic", printed in large friendly 
     </div>
 
     <!-- ____________________________________________Section two_____________________________________________________________________________ -->
-    <div class='box two container-fluid h-100 ' id="two_timeline">
+    <div class='box two container-fluid h-100 ' id="section_two">
             
         <div class="justify-content-center align-items-center h-100 " style="display: flex;" >
             <div class="whole_as_group w-100 h-100" >
