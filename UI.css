@@ -3,15 +3,45 @@
   -webkit-font-smoothing: antialiased;
 }
 
+.disable-hover{
+  pointer-events: none ;
+}
 body {
   background: #000000;
+  /* Break the flow */
+  position: absolute;
+  top:0;  
+  /* Sending body at the bottom of the stack */
   width: 100%;
   height: 100%;
-  position: absolute;
+ 
   margin: 0;
-  overflow: hidden;
+
+
+  /* scroll-behavior: smooth;
+	font-family: sans-serif;
+	scroll-snap-stop: always;
+	  scroll-behavior: smooth;
+	scroll-snap-type: y mandatory;	
+	display: flex;
+	-webkit-overflow-scrolling: touch; */
+	overflow: hidden;
 }
 
+.wrapper {
+  /* Making the wrapper stack above the body */
+  
+  z-index: 2;
+  background: #000000;
+  /* Break the flow */
+  position: absolute;
+  top:0;  
+  width: 100%;
+  height: 100%;
+ 
+  margin: 0;
+
+} 
 .box {
   cursor: pointer;
   position: absolute;
@@ -23,7 +53,7 @@ body {
 }
 
 .one {
-  background-image: url("space.jpg");
+  background-image: url("images/space.jpg");
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-position: center; 
@@ -44,15 +74,20 @@ body {
 
 
 .two {
-  background-image: url("space.jpg");
+  background-image: url("images/space.jpg");
 }
 
 .three {
-  background-image: url("space.jpg"); 
+  background-image: url("images/space.jpg"); 
+}
+
+.last
+{
+  background-image: url("images/space.jpg");
 }
 
 .four {
-  background-image: url("space.jpg");
+  background-image: url("images/space.jpg");
 }
 
 #source{
@@ -141,6 +176,16 @@ body {
   bottom:0;
   margin-bottom:5%;
   margin-right:5%;
+  z-index: 500;
+}
+
+.navigator-special{
+  position:absolute;
+  right:0;
+  bottom:0;
+  padding-bottom:5%;
+  padding-right:5%;
+  z-index: 500;
 }
 
 .down-arrow {
@@ -188,11 +233,13 @@ body {
 .timeline {
   background-color: transparent;
   min-width: 100%;
-  min-height: 100%;
+  min-height: 96%;
   display: flex;
   align-items: center;
   border-radius: 30px;
   margin: 20px;
+
+
 }
 
 .timeline--dot {
@@ -230,16 +277,35 @@ justify-content: space-equally;
   color: #f7f;
   font-weight: normal;
 
+
 }
 
 .timeline {
 overflow-x: auto;
+
 }
 
+
+
+/* Let's get this party started */
 .timeline::-webkit-scrollbar {
-display: none;
+  width: 32px;
 }
 
+/* Track */
+.timeline::-webkit-scrollbar-track {
+
+}
+
+/* Handle */
+.timeline::-webkit-scrollbar-thumb {
+  -webkit-border-radius: 50px;
+  border-radius: 50px;
+  background: rgba(255,17,119,0.5)
+}
+.timeline::-webkit-scrollbar-thumb:window-inactive {
+background: rgba(255,0,0,0.4); 
+}
 .timeline{
   font-weight:900;
   font-size:20px;
@@ -256,7 +322,7 @@ height: 250px;
 width: 400px;
 background-color: transparent;
 
-
+text-align:left;
 color: #fff;
 border-radius: 6px;
 padding: 5px 0;
@@ -278,7 +344,7 @@ overflow: hidden;
   width: 400px;
   background-color: transparent;
   
-  
+  text-align:left;
   color: #fff;
   border-radius: 6px;
   padding: 5px 0;
@@ -331,6 +397,586 @@ animation: typing 2s steps(30, end);
 @keyframes typing {
   from { width: 0% }
   to { width: 100% }
+}
+
+
+/*
+
+third section 
+
+it is a project section.
+
+*/
+
+.slider {
+
+	scroll-behavior: smooth;
+	font-family: sans-serif;
+	scroll-snap-stop: always;
+	  scroll-behavior: smooth;
+	scroll-snap-type: x mandatory;	
+	display: flex;
+	-webkit-overflow-scrolling: touch;
+  overflow-x: scroll;
+  overflow-y: hidden;
+	height:100vh;
+}
+
+/* Let's get this party started */
+.slider::-webkit-scrollbar {
+  width: 30px;
+}
+
+/* Track */
+.slider::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+/* Handle */
+.slider::-webkit-scrollbar-thumb {
+  -webkit-border-radius: 50px;
+  border-radius: 50px;
+  background: rgba(255,17,119,0.5)
+}
+.slider::-webkit-scrollbar-thumb:window-inactive {
+background: rgba(255,0,0,0.4); 
+}
+
+.section_three {
+  min-width:100vw;
+  max-height:100vh;
+	height: inherit;
+	scroll-snap-align: center;
+	text-align: center;
+	position: relative;
+	min-height:40vh;
+	transition:min-width 0.4s, min-height 0.4s;
+}
+
+  /* .section_three:hover
+  {
+    min-width:100vw;
+  } */
+h1	{
+  display:none;
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0s linear 300ms, opacity 2s;
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	text-align: center;
+	color: white;
+	width: 100%;
+	left: 0;
+  font-size: calc(1rem + 2vw);
+
+}
+h4	{
+  display:none;
+	position: absolute;
+	top: 70%;
+	transform: translateY(-50%);
+	text-align: center;
+	color: white;
+	width: 100%;
+	left: 0;
+  font-style: italic;
+
+}
+
+#three-one
+{
+	background-image:url('images/raenou.png');
+    background-repeat:no-repeat;
+    background-size:cover;
+    background-position: center center;
+}
+
+#three-two
+{
+		background-image:url('images/il_794xN.1348805048_c6ni.jpg');
+    background-repeat:no-repeat;
+    background-size:cover;
+    background-position: center center;
+}
+#three-three
+{
+		background-image:url('images/8346a676b664d5e917b708eb7a2175d8.jpg');
+    background-repeat:no-repeat;
+    background-size:cover;
+    background-position: center center;
+}
+
+#three-four
+{
+		background-image:url('images/baleia-web.jpg');
+    background-repeat:no-repeat;
+    background-size:cover;
+    background-position: center center;
+}
+
+#three-five
+{
+		background-image:url('images/76bcbd7eaf7b6e7a0dabf5d9be2adecc.jpg');
+    background-repeat:no-repeat;
+    background-size:cover;
+    background-position: center center;
+}
+
+#three-six
+{
+	background-image:url('images/434d5be11a2999e6f708a1d834bbee71.jpg');
+    background-repeat:no-repeat;
+    background-size:cover;
+    background-position: center center;
+}
+
+
+#three-seven
+{
+		background-image:url('images/276ddf3520dd5c2d40cec19cc24d20fa.jpg');
+    background-repeat:no-repeat;
+    background-size:cover;
+    background-position: center center;
+}
+
+#three-eight
+{
+		background-image:url('images/b23576ca59b8a9948584e5d8ed47375e.jpg');
+    background-repeat:no-repeat;
+    background-size:cover;
+    background-position: center center;
+}
+
+#three-nine
+{
+	background-image:url('images/pov_gun.png');
+    background-repeat:no-repeat;
+    background-size:cover;
+    background-position: center center;
+}
+
+#three-ten
+{
+	background-image:url('images/b0228b19353419.562d8f6c8a8d7.jpg');
+    background-repeat:no-repeat;
+    background-size:cover;
+    background-position: center center;
+}
+
+
+
+#andy-bernad
+{
+	background-image:url('https://vignette.wikia.nocookie.net/theoffice/images/2/20/C0164512-C4C2-485C-9CB6-85B31F642090.jpeg/revision/latest/scale-to-width-down/1000?cb=20200103213101');
+    background-repeat:no-repeat;
+    background-size:cover;
+}
+
+
+.overlay {
+  position:absolute;
+  display: none; /* Hidden by default */
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.2); /* Black background with opacity */
+  z-index: 1; /* Specify a stack order in case you're using a different order for other elements */
+  transition: background-color 2.5s;
+}
+
+
+.section_three:hover .overlay
+{
+	z-index: 1;
+	background-color: rgba(0,0,0,1);
+}
+
+.section_three:hover .overlay h4
+{
+  opacity: 1;
+	display:block;
+}
+
+.section_three:hover .overlay h1
+{
+  visibility: visible;
+  opacity: 1;
+  transition: visibility 0s linear 0s, opacity 2s;
+	display:block;
+}
+
+.section_three_hide
+{
+  z-index:500;
+  width:100vw;
+  height:100vh;
+  pointer-events: none;
+}
+
+
+
+/* 
+
+bottom contact me section
+
+*/
+
+.affix {
+  top:0;
+  width: 100%;
+  z-index: 3900 !important;
+}
+.navbar {
+  margin-bottom: 0px;
+}
+
+
+
+
+
+
+/* Final frame for contacts */
+
+#facebook
+{
+  width: 20%;
+height: 50px;
+background: rgba(0,0, 0, 0.8);
+  color:rgba(255,255, 255, 0.4);
+transition: height 1s;
+    position: absolute;
+bottom: 0;
+left:0;
+}
+
+#facebook:hover
+{
+  height: 100%;
+}
+#twitter
+{
+  width: 20%;
+height: 50px;
+background: rgba(0,0, 0, 0.8);
+  color:rgba(255,255, 255, 0.4);
+transition: height 1s;
+position: absolute;
+bottom: 0;
+left:20%;
+}
+
+#twitter:hover
+{
+  height: 100%;
+}
+
+#mail
+{
+  width: 20%;
+height: 50px;
+background: rgba(0,0, 0, 0.8);
+  color:rgba(255,255, 255, 0.4);
+transition: height 1s;
+position: absolute;
+bottom: 0;
+left:40%;
+}
+
+#mail:hover
+{
+  height: 100%;
+}
+
+#linkedin
+{
+  width: 20%;
+height: 50px;
+background: rgba(0,0, 0, 0.8);
+  color:rgba(255,255, 255, 0.4);
+transition: height 1s;
+position: absolute;
+bottom: 0;
+left:60%;
+}
+
+#linkedin:hover
+{
+  height: 100%;
+}
+
+#projects
+{
+  width: 20%;
+height: 50px;
+background: rgba(0,0, 0, 0.8);
+  color:rgba(255,255, 255, 0.4);
+transition: height 1s;
+position: absolute;
+bottom: 0;
+left:80%;
+}
+
+#projects:hover
+{
+  height: 100%;
+}
+
+.rows
+{
+  height: 100%; padding: 0; margin: 0;
+}
+
+.contact
+{
+  width: 25%; height: 50%; float: left; 
+}
+
+#facebook > .linktext
+{
+  position: absolute;
+  width:100%;
+  top: 50;
+  height: 50px;
+  margin-top: 50px;
+  text-align: center;
+  font-size: 10px;
+  visibility: hidden;
+  transition: height 1s;
+  text-decoration:none;
+}
+#facebook:hover > .linktext
+{
+  position: absolute;
+  top: 50;
+  height: 50px;
+  width:100%;
+  text-align: center;
+  font-size: 20px;
+  visibility: visible;
+  transition: height 1s;
+  text-decoration:none;
+}
+
+#twitter > .linktext
+{
+  position: absolute;
+  top: 50;
+  height: 50px;
+  width:100%;
+  text-align: center;
+  font-size: 10px;
+  visibility: hidden;
+  transition: height 1s;
+  text-decoration:none;
+}
+#twitter:hover > .linktext
+{
+  position: absolute;
+  top: 50;
+  height: 50px;
+  margin-top: 50px;
+  text-align: center;
+  font-size: 20px;
+  visibility: visible;
+  transition: height 1s;
+  text-decoration:none;
+}
+
+#mail > .linktext
+{
+  position: absolute;
+  top: 50;
+  height: 50px;
+  width:100%;
+  text-align: center;
+  font-size: 10px;
+  visibility: hidden;
+  transition: height 1s;
+  text-decoration:none;
+}
+#mail:hover > .linktext
+{
+  position: absolute;
+  top: 50;
+  height: 50px;
+  margin-top: 50px;
+  text-align: center;
+  font-size: 20px;
+  visibility: visible;
+  transition: height 1s;
+  text-decoration:none;
+}
+
+#linkedin > .linktext
+{
+  position: absolute;
+  top: 50;
+  height: 50px;
+  width:100%;
+  text-align: center;
+  font-size: 10px;
+  visibility: hidden;
+  transition: height 1s;
+  text-decoration:none;
+}
+#linkedin:hover > .linktext
+{
+  position: absolute;
+  top: 50;
+  height: 50px;
+  margin-top: 50px;
+  text-align: center;
+  font-size: 20px;
+  visibility: visible;
+  transition: height 1s;
+  text-decoration:none;
+}
+
+#projects > .linktext
+{
+  position: absolute;
+  top: 50;
+  height: 50px;
+  width:100%;
+  text-align: center;
+  font-size: 10px;
+  visibility: hidden;
+  transition: height 1s;
+  text-decoration:none;
+}
+#projects:hover > .linktext
+{
+  position: absolute;
+  top: 50;
+  height: 50px;
+  margin-top: 50px;
+  text-align: center;
+  font-size: 20px;
+  visibility: visible;
+  transition: height 1s;
+  text-decoration:none;
+}
+
+#facebook > .quotetext
+{
+  position: absolute;
+  bottom: 0;
+  height: 50px;
+  margin-top: 50px;
+  text-align: center;
+  font-size: 10px;
+
+  transition: height 1s;
+  visibility:hidden;
+}
+
+#facebook:hover > .quotetext
+{
+  position: absolute;
+  bottom: 20%;
+  margin-top: 50px;
+  text-align: center;
+  font-size: 12px;
+  color: white;
+  height: 20%;
+  visibility:visible; 	
+}
+
+#twitter > .quotetext
+{
+  position: absolute;
+  bottom: 0;
+  height: 50px;
+  margin-top: 50px;
+  text-align: center;
+  font-size: 20px;
+  color: transparent;
+  transition: height 1s;
+  visibility:unset;
+}
+
+#twitter:hover > .quotetext
+{
+  position: absolute;
+  bottom: 20%;
+  margin-top: 50px;
+  text-align: center;
+  font-size: 12px;
+  color: white;
+  height: 20%;	
+}
+
+#mail > .quotetext
+{
+  position: absolute;
+  bottom: 0;
+  height: 50px;
+  margin-top: 50px;
+  text-align: center;
+  font-size: 20px;
+  color: transparent;
+  transition: height 1s;
+  visibility:unset;
+}
+
+#mail:hover > .quotetext
+{
+  position: absolute;
+  bottom: 20%;
+  margin-top: 50px;
+  text-align: center;
+  font-size: 12px;
+  color: white;
+  height: 20%;	
+}
+
+#linkedin > .quotetext
+{
+  position: absolute;
+  bottom: 0;
+  height: 50px;
+  margin-top: 50px;
+  text-align: center;
+  font-size: 20px;
+  color: transparent;
+  transition: height 1s;
+  visibility:unset;
+}
+
+#linkedin:hover > .quotetext
+{
+  position: absolute;
+  bottom: 20%;
+  margin-top: 50px;
+  text-align: center;
+  font-size: 12px;
+  color: white;
+  height: 20%;	
+}
+
+#projects > .quotetext
+{
+  position: absolute;
+  bottom: 0;
+  height: 50px;
+  margin-top: 50px;
+  text-align: center;
+  font-size: 20px;
+  color: transparent;
+  transition: height 1s;
+  visibility:unset;
+}
+
+#projects:hover > .quotetext
+{
+  position: absolute;
+  bottom: 20%;
+  margin-top: 50px;
+  text-align: center;
+  font-size: 12px;
+  color: white;
+  height: 20%;	
 }
 
 

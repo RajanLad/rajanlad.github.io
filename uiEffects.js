@@ -21,17 +21,70 @@ function to_section_two()
     scrollIt(document.getElementsByClassName("two")[0]);
 }
 
-function to_section_last()
+function to_section_three()
 {
     //alert("v");
     scrollIt(document.getElementsByClassName("three")[0]);
+    document.getElementsByClassName("slider")[0].classList.remove("section_three_hide");
 }
+
+
+function to_section_last()
+{
+    // alert("last ");
+    
+    scrollIt(document.getElementsByClassName("last")[0]);
+    document.getElementsByClassName("slider")[0].classList.add("section_three_hide");
+    
+  
+}
+
+
+
 
 function to_section_one()
 {
     //alert("v");
     scrollIt(document.getElementsByClassName("one")[0]);
 }
+
+/*
+to scroll smoothly without click , on the personal project galery
+*/
+
+// here onmouseenter event i am click a Anchor tag 
+function move(x) {
+  var timer;
+  var element = document.getElementById('sliders');
+	var delayInMilliseconds = 1000; //1 second
+	//added delay to avoid quick smooth scroll event
+	setTimeout(function() {
+  //your code to be executed after 1 second
+
+
+  console.log(x.id);
+  x.width='1000px';
+	var anchor = document.createElement("a");  	 anchor.href = "#"+x.id;
+	anchor.style.display="none";
+	x.appendChild(anchor);
+  anchor.click();
+  x.removeChild(anchor);
+	}, delayInMilliseconds);
+}
+
+function removeMove(x)
+{
+  var element = document.getElementById('sliders');
+}
+
+
+
+/**
+ * hover disable on scroll
+ */
+
+
+
 
 // ---------------------------------------- C'est l'implémentation de Scroll Hijack pour scroll , Je viens d’un code penn --------------------
 $(document).ready(function () {
@@ -64,17 +117,17 @@ $(document).ready(function () {
   setSizes();
   $('body').on('resize', setSizes());
 
-  // function downSection() {
-  //   var positionFromTop = $(sections[scroll.activeSection + 1]).position().top;
-  //   $("body, html").animate({ "scrollTop": positionFromTop }, 300);
-  //   ++scroll.activeSection;
-  // }
+  function downSection() {
+    // var positionFromTop = $(sections[scroll.activeSection + 1]).position().top;
+    // $("body, html").animate({ "scrollTop": positionFromTop }, 300);
+    // ++scroll.activeSection;
+  }
 
-  // function upSection() {
-  //   var positionFromTop = $(sections[scroll.activeSection - 1]).position().top;
-  //   $("body, html").animate({ "scrollTop": positionFromTop }, 300);
-  //   --scroll.activeSection;
-  // }
+  function upSection() {
+    // var positionFromTop = $(sections[scroll.activeSection - 1]).position().top;
+    // $("body, html").animate({ "scrollTop": positionFromTop }, 300);
+    // --scroll.activeSection;
+  }
 
   $("body").hammer({ preventDefault: true }).on("swipe", function (event) {
     if (event.gesture.direction == 'up') {
