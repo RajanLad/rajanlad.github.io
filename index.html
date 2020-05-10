@@ -11,30 +11,9 @@
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
   <link href="https://fonts.googleapis.com/css?family=Kanit:900|Monoton" rel="stylesheet">
   <link href='https://fonts.googleapis.com/css?family=Jura' rel='stylesheet'>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
 
-<script>
-// (function() {
-//     function scrollHorizontally(e) {
-//         e = window.event || e;
-//         var delta = Math.max(-1, Math.min(1, (e.wheelDelta || -e.detail)));
-//         document.getElementById('timelin').scrollLeft -= (delta*40); // Multiplied by 40
-//         e.preventDefault();
-//     }
-//     if (document.getElementById("section_two").addEventListener) {
-//         // IE9, Chrome, Safari, Opera
-//         document.getElementById("section_two").addEventListener("mousewheel", scrollHorizontally, false);
-//         // Firefox
-//         document.getElementById("section_two").addEventListener("DOMMouseScroll", scrollHorizontally, false);
-//     } else {
-//         // IE 6/7/8
-//         document.getElementById("section_two").getElementById('yourDiv').attachEvent("onmousewheel", scrollHorizontally);
-//     }
-// })();
-
-
-
-</script>
 </head>
 <!-- Francais -->
 <!-- J'ai thématisé ce site sur l'un de mes films préférés: "Hitchhiker Guide to the Galaxy".-->
@@ -52,6 +31,11 @@
 
                 <div class="row justify-content-center">
                     <h2 class="head">Hitchhiker's Guide to the my World</h2>
+                    
+                </div>
+
+                <div class="row justify-content-center">
+                <h6 class="subhead">A full stack mobile developer</h6>
                 </div>
 
                 <div class="justify-content-center navigator" onclick="to_section_two()">
@@ -93,7 +77,7 @@
                                     <div class="time">03/2017<span class="tooltiptext-bottom"><h2>Android BLE Engineer</h2><h6>@Diabeto</h6><p class="two_description">I started integrating on Bluetooth Glucometers . I integrated 4 generic BLE profile glucometers, 5 custom BLE profile glucometers and 2 classic bluetooth glucometers.  .</p></span></div>                
                                 <div><i class='fas fa-briefcase'></i></div></div>
                             <div class="timeline--dot">
-                                    <div class="time">08/2018<span class="tooltiptext"><h2>MSc. in Software Engineering</h2><h6>@EPITA</h6><p class="two_description">New city, new challenges [mostly figuring out whether to say Bonjour or Bonsoir].. Started my Masters @EPITA, Paris. </p>.</p></span></div>
+                                    <div class="time">08/2018<span class="tooltiptext"><h2>MSc. in Software Engineering</h2><h6>@EPITA</h6><p class="two_description">New city, new challenges [mostly figuring out whether to say Bonjour or Bonsoir].. Started my Masters @EPITA. </p>.</p></span></div>
                                 <div><i class='fas fa-graduation-cap'></i></div>
                             </div>
                             <div class="timeline--dot">
@@ -118,79 +102,477 @@
             <div class="slider" id="sliders" >
                 <section id="three-one"  class="section_three" onmouseenter="move(this)" onmouseout="removeMove(this)" disabled>
                     
-                    <div class="overlay">
-                        <h1>Michael Scott</h1>
-                        <h4>"That’s what she said."</h4>
+                    <!-- <div class="overlay">
+                        <h1>Pam Beesly</h1>
+                        <h4>““I have this little vacuum cleaner that’s broken. If Dwight doesn’t work out, maybe that can be manager.””</h4> 
+                    </div> -->
+
+
+
+                    <div class="tab-div">
+                        <div class="container-mac">
+                            <div class="tab-bar">
+                                <div class="options" id="logo-option">
+                                </div>
+                                <div class="options">
+                                    File
+                                </div>
+                                <div class="options">
+                                    Edit
+                                </div>
+                                <div class="options">
+                                    View
+                                </div>
+                                <div class="options">
+                                    Window
+                                </div>
+                                <div class="options">
+                                    Help
+                                </div>
+                            </div>
+                            <div class="header-mac">
+                              <div class="close-button">
+                              </div>
+                              <div class="header-title">
+                                System
+                              </div>
+                              <div class="info-button">
+                              </div>
+                            </div>
+                            <div class="header-info">
+                              <div class="header-info-items">
+                                7 items
+                              </div>
+                              <div class="header-info-disk-size">
+                                489 GB total
+                              </div>
+                              <div class="header-info-available-size">
+                                189 GB available
+                              </div>
+                            </div>
+                            <div class="scale">
+                            </div>
+                            
+                            <div class="content">
+                              <div class="content-main">
+                                
+                                    <div class="row-one-folder" id="row-description">  
+                                        Wake Up! App<br><br>
+                                            As per Wikipedia, A power nap is a short sleep that terminates before deep sleep (slow-wave sleep; SWS); it is intended to quickly revitalize the the person. So I decided to make a andoid app and web app
+                                            Wake Up! is a Power Nap (Productivity App).It gives a set of time slots like 01:00 min, 02:00 min power nap with an alarm to wake you up from the power nap. I has some funny alarm tones. I have tested it on my side but it's in BETA version, there may be bugs.There is a web application that is made in HTML5/CSS/JavaScript.I made the both apps based on designs in figma.
+                                            
+                                      <br><br>#Java , #HTML5 , #CSS , #Bootstrap , #Javascript , #Figma
+                                          </div>
+                                          <div class="row-one-folder">  
+                                            <div class="item-one">      
+                                              <i class="material-icons icon-sections" style="font-size:48px;color:green">	color_lens
+                                              </i>
+                                              Design
+                                              <br>
+                                              <a href="https://www.figma.com/file/0k6WEg7g30FW7j1h8EJ9pk/WakeUpWeb" target="_blank"><i class='fas fa-external-link-alt' style='font-size:16px;color:green;'></i></a>
+                                              <a href="https://www.behance.net/gallery/82171061/Wake-Up" target="_blank"><i class='fas fa-external-link-alt' style='font-size:16px;color:green;'></i></a>
+                                            </div>   
+                                            
+                                            <div class="item-one">      
+                                              <i class="material-icons" style="font-size:48px;color:green">phone_iphone
+                                              </i>
+                                              Mobile
+                                              <br>
+                                              <a href="https://bitbucket.org/RajanLad/wakeup/src/master/" target="_blank" style="color:green;">&lt/&gt</a>
+                                              <a href="https://play.google.com/store/apps/details?id=com.wakeup.rajan.wakeup" target="_blank"><i class='fas fa-external-link-alt' style='font-size:16px;color:green;'></i></a>
+                                            </div>
+                                            
+                                            <div class="item-one">      
+                                              <i class="material-icons" style="font-size:48px;color:green">	public
+                                              </i>
+                                              Web
+                                              <br>
+                                              <a href="https://play.google.com/store/apps/details?id=com.wakeup.rajan.wakeup" target="_blank" style="visibility: hidden;">&lt/&gt</a>
+                                             <a href="http://rajanlabs.000webhostapp.com/WakeUpApp/" target="_blank"><i class='fas fa-external-link-alt' style='font-size:16px;color:green;'></i></a>
+                                            </div> 
+                                      
+                                        </div>
+                                
+                              </div>
+                              <div class="content-scroll">
+                                <div class="up-arrow">
+                                  <i class="material-icons">expand_less</i>
+                                </div>
+                                <div class="content-scroll-bar">
+                                </div>
+                                <div class="down-arrow-mac">
+                                  <i class="material-icons">expand_more</i>
+                                </div>
+                              </div>
+                            </div>
+                              
+                              
+                            <div class="footer">
+                              <div class="left-arrow">
+                                  <i class="material-icons">chevron_left</i>
+                                </div>
+                                <div class="horizontal-scroll-bar">
+                                </div>
+                                <div class="right-arrow">
+                                  <i class="material-icons">chevron_right</i>
+                                </div>
+                            </div>
+                          </div>
                     </div>
+                    <h6 class="content-div">Hover over me</h6>
+                        
+
             
                 </section>
                     <section id="three-two" class="section_three" onmouseenter="move(this)" onmouseout="removeMove(this)">
-                    <div class="overlay">
-                        <h1>Dwight Schrute</h1>
-                        <h4>“Identity theft is not a joke, Jim! Millions of families suffer every year!”</h4> 
-                    </div>
+                            <div class="tab-div">
+                                
+                                    <div class="container-mac">
+                                            <div class="tab-bar">
+                                                <div class="options" id="logo-option">
+                                                </div>
+                                                <div class="options">
+                                                    File
+                                                </div>
+                                                <div class="options">
+                                                    Edit
+                                                </div>
+                                                <div class="options">
+                                                    View
+                                                </div>
+                                                <div class="options">
+                                                    Window
+                                                </div>
+                                                <div class="options">
+                                                    Help
+                                                </div>
+                                            </div>
+                                            <div class="header-mac">
+                                              <div class="close-button">
+                                              </div>
+                                              <div class="header-title">
+                                                System
+                                              </div>
+                                              <div class="info-button">
+                                              </div>
+                                            </div>
+                                            <div class="header-info">
+                                              <div class="header-info-items">
+                                                7 items
+                                              </div>
+                                              <div class="header-info-disk-size">
+                                                489 GB total
+                                              </div>
+                                              <div class="header-info-available-size">
+                                                189 GB available
+                                              </div>
+                                            </div>
+                                            <div class="scale">
+                                            </div>
+                                            
+                                            <div class="content">
+                                              <div class="content-main">
+                                                
+                                                    <div class="row-one-folder" id="row-description">  
+                                                            Billoo App<br><br>
+                                                            
+                                                            I designed UI and developed android app for our final year project called BILLOO @ EPITA. The BILLOO is a Cloud based INVOICE STORAGE
+PLATFORM. It will enable retailer’s Point of Sale systems to send the receipt/bill digitally from any pay point to
+the customer’s account through their unique
+barcode/QR Code/ID without exposing their personal data like mobile number or e-mail address. 
+
+Due to time contraints, I used modular arch. and was Network only app. with use of SharedPreferences as session management. Retrofit for network calls.
+                                                            
+                                                      <br><br>#Java , #Retrofit , #BottomSheetBehavior , #MikePhilCharts , #Barcode , #Behance
+                                                          </div>
+                                                          <div class="row-one-folder">  
+                                                            <div class="item-one">      
+                                                              <i class="material-icons icon-sections" style="font-size:48px;color:green">	color_lens
+                                                              </i>
+                                                              Design
+                                                              <br>
+                                                              <a href="https://www.behance.net/gallery/82179757/Billoo" target="_blank"><i class='fas fa-external-link-alt' style='font-size:16px;color:green;'></i></a>
+                                                            </div>   
+                                                            
+                                                            <div class="item-one">      
+                                                              <i class="material-icons" style="font-size:48px;color:green">phone_iphone
+                                                              </i>
+                                                              Mobile
+                                                              <br>
+                                                              <a href="https://github.com/RajanLad/Billoo_Android" target="_blank" style="color:green;">&lt/&gt</a>
+                                
+                                                            </div>
+                                                            
+
+                                                      
+                                                          </div>
+                                                
+                                              </div>
+                                              <div class="content-scroll">
+                                                <div class="up-arrow">
+                                                  <i class="material-icons">expand_less</i>
+                                                </div>
+                                                <div class="content-scroll-bar">
+                                                </div>
+                                                <div class="down-arrow-mac">
+                                                  <i class="material-icons">expand_more</i>
+                                                </div>
+                                              </div>
+                                            </div>
+                                              
+                                              
+                                            <div class="footer">
+                                              <div class="left-arrow">
+                                                  <i class="material-icons">chevron_left</i>
+                                                </div>
+                                                <div class="horizontal-scroll-bar">
+                                                </div>
+                                                <div class="right-arrow">
+                                                  <i class="material-icons">chevron_right</i>
+                                                </div>
+                                            </div>
+                                          </div>
+                                    </div>
+                        <h6 class="content-div">Hover over me</h6>
                 </section>
                 <section id="three-three" class="section_three" onmouseenter="move(this)" onmouseout="removeMove(this)">
-                    <div class="overlay">
-                        <h1>Pam Beesly</h1>
-                        <h4>““I have this little vacuum cleaner that’s broken. If Dwight doesn’t work out, maybe that can be manager.””</h4> 
+                    <div class="tab-div">
+                            <div class="container-mac">
+                                    <div class="tab-bar">
+                                        <div class="options" id="logo-option">
+                                        </div>
+                                        <div class="options">
+                                            File
+                                        </div>
+                                        <div class="options">
+                                            Edit
+                                        </div>
+                                        <div class="options">
+                                            View
+                                        </div>
+                                        <div class="options">
+                                            Window
+                                        </div>
+                                        <div class="options">
+                                            Help
+                                        </div>
+                                    </div>
+                                    <div class="header-mac">
+                                      <div class="close-button">
+                                      </div>
+                                      <div class="header-title">
+                                        System
+                                      </div>
+                                      <div class="info-button">
+                                      </div>
+                                    </div>
+                                    <div class="header-info">
+                                      <div class="header-info-items">
+                                        7 items
+                                      </div>
+                                      <div class="header-info-disk-size">
+                                        489 GB total
+                                      </div>
+                                      <div class="header-info-available-size">
+                                        189 GB available
+                                      </div>
+                                    </div>
+                                    <div class="scale">
+                                    </div>
+                                    
+                                    <div class="content">
+                                      <div class="content-main">
+                                        
+                                            <div class="row-one-folder" id="row-description">  
+                                                    Github App<br><br>
+                                                    This is a app that gets the github repositories by keyword search, and on selection of particular repo, it takes you to another screen that shows all commits and all the contributors. It is and offline first application with the help of realm.io.
+                                                    The application is divided into 2 parts:
+
+                                                        a view with a search field and a list to display the repositories retrieved from the GitHub API,
+
+                                                        a view with a second list to display branch and contributors with their profile image.
+                                                    
+                                              <br><br>#Java , #Retrofit , #Realm , #Bootstrap , #GitHub API , #RecyclerView
+                                                  </div>
+                                                  <div class="row-one-folder">   
+                                                    
+                                                    <div class="item-one">      
+                                                      <i class="material-icons" style="font-size:48px;color:green">phone_iphone
+                                                      </i>
+                                                      Mobile
+                                                      <br>
+                                                      <a href="https://github.com/RajanLad/GitAndroidAPI" target="_blank" style="color:green;">&lt/&gt</a>
+                                                      <a href="https://drive.google.com/file/d/1U5xVfyIkQkqrgxgFCqi0Jipxb9NMHVDD/view?usp=sharing" target="_blank"><i class='fas fa-external-link-alt' style='font-size:16px;color:green;'></i></a>
+                                                    </div>
+                                                    
+
+                                              
+                                                </div>
+                                        
+                                      </div>
+                                      <div class="content-scroll">
+                                        <div class="up-arrow">
+                                          <i class="material-icons">expand_less</i>
+                                        </div>
+                                        <div class="content-scroll-bar">
+                                        </div>
+                                        <div class="down-arrow-mac">
+                                          <i class="material-icons">expand_more</i>
+                                        </div>
+                                      </div>
+                                    </div>
+                                      
+                                      
+                                    <div class="footer">
+                                      <div class="left-arrow">
+                                          <i class="material-icons">chevron_left</i>
+                                        </div>
+                                        <div class="horizontal-scroll-bar">
+                                        </div>
+                                        <div class="right-arrow">
+                                          <i class="material-icons">chevron_right</i>
+                                        </div>
+                                    </div>
+                            </div>
                     </div>
+                    <h6 class="content-div">Hover over me</h6>
                 </section>
                 <section id="three-four" class="section_three" onmouseenter="move(this)" onmouseout="removeMove(this)">
-                    <div class="overlay">
-                        <h1> Oscar Martinez</h1>
-                        <h4>“I am super cool. I am an accountant at a failing paper supply company in scranton. Much like sir ian mckellen.”</h4>
-                    </div>
+                        <div class="tab-div">
+                                <div class="container-mac">
+                                        <div class="tab-bar">
+                                            <div class="options" id="logo-option">
+                                            </div>
+                                            <div class="options">
+                                                File
+                                            </div>
+                                            <div class="options">
+                                                Edit
+                                            </div>
+                                            <div class="options">
+                                                View
+                                            </div>
+                                            <div class="options">
+                                                Window
+                                            </div>
+                                            <div class="options">
+                                                Help
+                                            </div>
+                                        </div>
+                                        <div class="header-mac">
+                                          <div class="close-button">
+                                          </div>
+                                          <div class="header-title">
+                                            System
+                                          </div>
+                                          <div class="info-button">
+                                          </div>
+                                        </div>
+                                        <div class="header-info">
+                                          <div class="header-info-items">
+                                            7 items
+                                          </div>
+                                          <div class="header-info-disk-size">
+                                            489 GB total
+                                          </div>
+                                          <div class="header-info-available-size">
+                                            189 GB available
+                                          </div>
+                                        </div>
+                                        <div class="scale">
+                                        </div>
+                                        
+                                        <div class="content">
+                                          <div class="content-main">
+                                            
+                                                <div class="row-one-folder" id="row-description">  
+                                                    VerifyFields Web App<br><br>
+                                                    While developing mobile apps, I needed to pre-check the data from text fields before pushing it to server side. 
+                                                    Every app has different requirements for password,emails,etc. 
+                                                    So store all check functions in one place and call it from there. 
+                                                    Using this web app it would ease to generate code instead of writing from scratch. Please do note , this is my new idea and in Beta stage. 
+                                                    So it might have bugs and mistakes(especially in REGEX part of code). 
+                                                        
+                                                  <br><br>#HTML 5 , #CSS , #Javascript , #Bootstrap
+                                                      </div>
+                                                      <div class="row-one-folder">   
+                                                        
+                                                        <div class="item-one">      
+                                                          <i class="material-icons" style="font-size:48px;color:green">public
+                                                          </i>
+                                                          Web
+                                                          <br>
+                                                          <a href="http://rajanlabs.000webhostapp.com/VerifyFields/" target="_blank"><i class='fas fa-external-link-alt' style='font-size:16px;color:green;'></i></a>
+                                                        </div>
+                                                        
+    
+                                                  
+                                                    </div>
+                                            
+                                          </div>
+                                          <div class="content-scroll">
+                                            <div class="up-arrow">
+                                              <i class="material-icons">expand_less</i>
+                                            </div>
+                                            <div class="content-scroll-bar">
+                                            </div>
+                                            <div class="down-arrow-mac">
+                                              <i class="material-icons">expand_more</i>
+                                            </div>
+                                          </div>
+                                        </div>
+                                          
+                                          
+                                        <div class="footer">
+                                          <div class="left-arrow">
+                                              <i class="material-icons">chevron_left</i>
+                                            </div>
+                                            <div class="horizontal-scroll-bar">
+                                            </div>
+                                            <div class="right-arrow">
+                                              <i class="material-icons">chevron_right</i>
+                                            </div>
+                                        </div>
+                                </div>
+                        </div>
+                    <h6 class="content-div">Hover over me</h6>
                 </section>
                 <section id="three-five" class="section_three" onmouseenter="move(this)" onmouseout="removeMove(this)">
-                    <div class="overlay">
-                        <h1>Creed Bratton</h1>
-                        <h4>“Nobody steals from Creed Bratton and gets away with it. The last person to do this disappeared. His name? Creed Bratton.”</h4>
-                    </div>
+                    <div class="tab-div"></div>
+                    <h6 class="content-div">Hover over me</h6>
                 </section>
                 
                     </section>
                 <section id="three-six" class="section_three" onmouseenter="move(this)" onmouseout="removeMove(this)">
-                    <div class="overlay">
-                        <h1>Jim Halpert</h1>
-                        <h4>“By two o'clock Dwight will choose himself to be the assistant to his own assistant, me..”</h4>
-                    </div>
+                    <div class="tab-div"></div>
+                    <h6 class="content-div">Hover over me</h6>
                 </section>
             
                 <section id="three-seven" class="section_three" onmouseenter="move(this)" onmouseout="removeMove(this)">
-                    <div class="overlay">
-                        <h1>Stanley Hudson</h1>
-                        <h4>“Don't tell me how to do my business.”</h4>
-            
-                    </div>
+                    <div class="tab-div"></div>
+                    <h6 class="content-div">Hover over me</h6>
                 </section>
             
                 <section id="three-eight" class="section_three" onmouseenter="move(this)" onmouseout="removeMove(this)">
-                    <div class="overlay">
-                        <h1>Meredith</h1>
-                        <h4>“I've never been cheated on, cheated, or been used to cheat with.”</h4>
-                    </div>
+                    <div class="tab-div"></div>
+                    <h6 class="content-div">Hover over me</h6>
                 </section>
             
                 <section id="three-nine" class="section_three" onmouseenter="move(this)" onmouseout="removeMove(this)">
-                    <div class="overlay">
-                        <h1>Kevin Malone</h1>
-                        <h4>“If Angela can get a gay man to marry her, maybe I could get a lesbian to marry me. That's hot..”</h4>
-                    </div>
+                    <div class="tab-div"></div>
+                    <h6 class="content-div">Hover over me</h6>
                 </section>
             
                 <section id="three-ten" class="section_three" onmouseenter="move(this)" onmouseout="removeMove(this)">
-                    <div class="overlay">
-                        <h1>Ryan Howard</h1>
-                        <h4>“I’M SUCH A PERFECTIONIST THAT I’D KINDA RATHER NOT DO IT AT ALL THAN DO A CRAPPY VERSION.”</h4>
-                    </div>
+                    <div class="tab-div"></div>
+                    <h6 class="content-div">Hover over me</h6>
                 </section>
 
 
             </div>
 
-            <div class="justify-content-center navigator-special" onclick="to_section_last()">
-                <h2 style="color: white;">Clique to goto top</h2>    
+            <div class="justify-content-center navigator" onclick="to_section_last()">
+                <h2 class="down-arrow" >Clique to swipe down</h2>    
         </div>
         </div>
     </div>
@@ -218,7 +600,7 @@
                       <div class=linktext><a href="https://codepen.io/RajanLad/" target="_blank" style="text-decoration:none;"><i class='fas fa-external-link-alt' style='font-size:36px'></i></a></div>
                       <div class=quotetext>"Space," says the introduction to The Hitchhiker's Guide, "is big. Really big. You just won't believe how vastly, hugely, mind-bogglingly big it is." A-a-and so on. It also says that if you hold a lungful of air, you can survive in the total vacuum of space for about 30 seconds. But with space being really big and all, the chances of being picked up within that time are 22,079,460,347 to one against. Strangely, this is also the telephone number of an Islington flat where Arthur Dent went to a fancy dress party, and met a very nice young woman whom he totally blew it with.</div>
                   </div>
-              <div class=contact id=mail ><img src="https://lh3.googleusercontent.com/proxy/mGT0QX8kqxPZVD3YoemC1nXvxJn0nNpm40i6jiuxiNa4uWAZHFP9kBrsRHaeW81ga55GX-naDOMWJrxFAwpSCEfU9A_s8Dwu4e98vnyP5Qrjn_EuAA" alt="gmail" style="max-width:100%;
+              <div class=contact id=mail ><img src="http://rajanlabs.000webhostapp.com/447167_preview.png" alt="gmail" style="max-width:100%;
                 max-height:100%; width:10%;  display: block;
                 margin-left: auto;
                       margin-right: auto;" >

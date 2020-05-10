@@ -145,8 +145,27 @@ body {
 
 }
 
+.subhead
+{
+
+  letter-spacing: 8px;
+  color:#ffffff;
+  font:bold 1em/1em sans-serif;
+  font-family: 'Gill Sans', 'sans-serif';
+  font-weight: 200;
+  /* text-shadow:
+  0 0 6px rgba(202,228,225,0.92),
+  0 0 30px rgba(202,228,225,0.34),
+  0 0 12px rgba(30,132,242,0.52),
+  0 0 21px rgba(30,132,242,0.92),
+  0 0 34px rgba(30,132,242,0.78),
+  0 0 54px rgba(30,132,242,0.92); */
+  font-size:20px;
+
+}
+
 #logo{
-  filter: drop-shadow(0 0 4px rgba(45, 219, 144, 0.48));
+  filter: drop-shadow(0 0 0px rgba(45, 219, 144, 0.48));
   animation: neon 1.2s ease-in-out infinite alternate;  
 }
 
@@ -163,10 +182,10 @@ body {
 
 @keyframes neon {
   from {
-    filter: drop-shadow(0 0 14px rgba(45, 219, 144, 0.48));
+    filter: drop-shadow(0 0 4px rgba(45, 219, 144, 0.48));
   }
   to {
-    filter: drop-shadow(0 0 24px rgba(45, 219, 144, 0.78));
+    filter: drop-shadow(0 0 24px rgba(45, 219, 144, 0.68));
   }
 }
 
@@ -450,7 +469,9 @@ background: rgba(255,0,0,0.4);
 	text-align: center;
 	position: relative;
 	min-height:40vh;
-	transition:min-width 0.4s, min-height 0.4s;
+  transition:min-width 0.4s, min-height 0.4s;
+  overflow: hidden;
+
 }
 
   /* .section_three:hover
@@ -487,7 +508,7 @@ h4	{
 
 #three-one
 {
-	background-image:url('images/raenou.png');
+	background-image:url('images/resatendofuni.png');
     background-repeat:no-repeat;
     background-size:cover;
     background-position: center center;
@@ -605,6 +626,342 @@ h4	{
   transition: visibility 0s linear 0s, opacity 2s;
 	display:block;
 }
+
+
+
+
+/* slider tab overlay UI effect */
+
+.parent-tab
+{
+  height: 900px; width: 900px;
+  background: beige;
+  transition: transform 0.3s linear;
+  transform-origin: top left;
+}
+
+.tab-div {
+  position:absolute;
+  bottom:0px;
+  left:50%;
+  margin-left: -200px;
+  width: 400px;
+  height: 60px;
+  border-top-left-radius:350px ;
+  border-top-right-radius:350px;
+  background: black;
+  transform: scale(1,1);
+  transition: height 1s , width 1s , left 1s, visibility 2s , border-top-left-radius 2s,border-top-right-radius 2s;
+  transform-origin: center;
+  /* transition-delay: 2s; */
+  display: flex;
+
+  overflow: hidden;
+}
+
+.content-div {
+  position:absolute;
+  bottom:0;
+  top:94%;
+  left:50%;
+  margin-left:-4%;
+  color: white;
+  font-family: "Arial Rounded MT Bold";
+  transition: color 2s;
+  /* transform-origin: center; */
+  /* transition-delay: 2s; */
+  display:flex;
+  justify-content:center;
+  background:black;
+
+}
+
+.container-projects{
+  max-width: 800px;
+  max-height: 500px;
+  background: rgba(255,0,0,1);
+  z-index: 5;
+  transition: background 1s;
+  transform-origin: center;
+  transition-delay: 0s;
+}
+
+
+
+
+
+.tab-div:hover {
+  height: 100vh;  
+  width: 110vw;
+  left:13%;
+  border-top-left-radius:0px ;
+  border-top-right-radius:0px;
+  cursor:default;
+}
+
+.tab-div:hover .container-mac{
+  visibility: visible;
+
+}
+
+
+.tab-div:hover + .content-div
+{
+  color:black;
+}
+
+.container-mac
+{
+  visibility: hidden;
+  width:90vw;
+  height:600px;
+  background-color:black;
+  position: relative;
+  top:5%;
+  left:5%;
+  display:flex;
+  flex-direction:column;
+  padding:10px;
+  padding-top: 5px;
+  border:2px inset green;
+}
+
+.tab-bar
+{
+  width:100%;
+  height:10%;
+  margin-bottom: 1%;
+  background-color:black;
+  display:flex;
+  align-items:center;
+}
+
+.options
+{
+  color:green;
+    font-family:Chicago;
+  margin-right:2%;
+}
+
+#logo-option
+{
+background:url('https://rajanlabs.000webhostapp.com/computer.png');
+  background-size: cover;
+  height:20px;
+  width:20px;
+  margin-left:1%;
+}
+
+.header-mac
+{
+ width:100%;
+ height:6%;        background:url('https://rajanlabs.000webhostapp.com/assets/green_horizontal_line.png');
+ display:flex;
+  justify-content:space-between;
+}
+
+.close-button
+{
+  width:30px;
+  height:30px;
+  margin-left:2%;
+  border-left:5px solid black;
+  border-right:5px solid black;
+  border-bottom:5px solid black;
+  border-top:2px solid black;
+  background-color:green;
+}
+
+.header-title
+{
+  background-color:black;
+  color:green;
+  padding-left:10px;
+  padding-right:10px;
+  font-family:Chicago;
+}
+.info-button
+{
+  width:20px;
+  height:20px;
+  border-left:5px solid black;
+  border-right:5px solid black;
+  border-bottom:5px solid black;
+  background-color:green;
+  visibility:hidden;
+} 
+
+
+.header-info
+{
+    width:100%;
+    height:6%;
+  margin-top:1%;
+  border:2px solid green;
+  background-color:black;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+}
+
+
+.header-info-items
+{
+  background-color:black;
+  color:green;
+  padding-left:10px;
+  padding-right:10px;
+  font-family:Chicago;
+}
+
+.header-info-disk-size
+{
+  background-color:black;
+  color:green;
+  padding-left:10px;
+  padding-right:10px;
+  font-family:Chicago;
+}
+
+.header-info-available-size
+{
+  background-color:black;
+  color:green;
+  padding-left:10px;
+  padding-right:10px;
+  font-family:Chicago;
+}
+
+
+
+.scale
+{
+    width:100%;
+    height:6%;
+    background-color:black;
+}
+
+.content
+{
+    width:100%;
+  min-height:450px;
+    height:60%;
+    border:2px solid green;
+  display:flex;
+  justify-content:center;
+}
+
+.content-main
+{
+  height:100%;
+  width:98%;
+}
+
+#row-description
+{
+  height:60%;
+  color:green;
+  font-family:Chicago;
+  margin:10px;
+}
+
+.content-scroll
+{
+  height:100%;
+  width:2%;
+}
+
+.row-one-folder
+{
+  display:flex;
+  justify-content:space-around;
+  padding-top:2%;
+}
+
+.item-one
+{
+  color:green;
+  min-width:70px;
+  font-family:Chicago;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+}
+
+.content-scroll
+{
+  max-width:20px;
+    text-align:center;
+}
+
+.up-arrow
+{
+  height:7%;
+  text-align:center;
+  background:green;
+}
+
+.content-scroll-bar
+{
+  height:86%;
+  background:green;
+  border:1px outset black;
+}
+
+.down-arrow-mac
+{
+  height:7%;
+  text-align:center;
+  background:green;
+}
+.icon-sections
+{
+  pointer-events: none;
+}
+
+/* box-shadow: -1px 1px 2px 5px rgba(0,0,0,0.75); */
+.footer
+{
+    width:98.5%;
+  
+    max-height:4%;
+    display:flex;
+  background:black;
+}
+
+.left-arrow
+{
+  width:2%;
+    text-align:center;
+  background:green;
+}
+
+.right-arrow
+{
+  width:2%;
+    text-align:center;
+  background:green;
+}
+
+.horizontal-scroll-bar
+{
+  width:96%;
+    text-align:center;
+  background:green;
+  border:2px outset black;
+}
+
+@font-face {
+    font-family: 'digital';
+    src: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/38273/digital-webfont.woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {font-family: "Chicago"; src: url("//db.onlinewebfonts.com/t/53dc764fd0dbbb3140b7909afd437722.eot"); src: url("//db.onlinewebfonts.com/t/53dc764fd0dbbb3140b7909afd437722.eot?#iefix") format("embedded-opentype"), url("//db.onlinewebfonts.com/t/53dc764fd0dbbb3140b7909afd437722.woff2") format("woff2"), url("//db.onlinewebfonts.com/t/53dc764fd0dbbb3140b7909afd437722.woff") format("woff"), url("//db.onlinewebfonts.com/t/53dc764fd0dbbb3140b7909afd437722.ttf") format("truetype"), url("//db.onlinewebfonts.com/t/53dc764fd0dbbb3140b7909afd437722.svg#Chicago") format("svg"); }
+
+
+/* ------------------------ */
 
 .section_three_hide
 {
