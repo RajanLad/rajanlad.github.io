@@ -104,7 +104,8 @@ $(document).ready(function () {
 
 
   function setSizes() {
-    for (var i = 0; i < sections.length; i++) {if (window.CP.shouldStopExecution(0)) break;
+    for (var i = 0; i < sections.length; i++) {
+// 	    if (window.CP.shouldStopExecution(0)) break;
 
       $(sections[i]).css({
         'top': window.innerHeight * i,
